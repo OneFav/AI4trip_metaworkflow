@@ -1,0 +1,16 @@
+{
+  "sensitivity_summary": "P1 策略对收益矩阵中 (0, 5) 条目的变化高度敏感。",
+  "threshold_notes": [
+    {
+      "param": "payoff_P1_A2B1",
+      "threshold": 0.5,
+      "effect": "均衡策略从混合转向纯策略 A1"
+    },
+    {
+      "param": "payoff_P2_A1B2",
+      "threshold": 0.8,
+      "effect": "P2 占优策略反转"
+    }
+  ],
+  "robustness": "均衡解在 10% 收益扰动下保持稳定"
+}

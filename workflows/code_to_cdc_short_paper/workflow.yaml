@@ -1,0 +1,65 @@
+name: code_to_cdc_short_paper
+version: v0.1
+goal: 从代码文件生成一篇具备 CDC 短文投稿完整度的论文草稿，并补齐关键严谨性证据
+scene: research_desk
+automation_mode: balanced
+
+stages:
+  - id: stage_1
+    name: 代码解析与主张抽取
+    executor: Agent
+    goal: 提炼方法描述、关键假设与已有有效性证据
+    required_capabilities:
+      - code_claim_extraction
+      - result_trace_linking
+  - id: stage_2
+    name: 严谨性缺口诊断与实验计划
+    executor: Human-Agent
+    goal: 形成可执行的补强计划并确定优先级
+    required_capabilities:
+      - rigor_gap_analysis
+      - experiment_design
+  - id: stage_3
+    name: 补强实验与统计分析
+    executor: Agent
+    goal: 生成可复现的对比、消融、统计与鲁棒性结果
+    required_capabilities:
+      - batch_experiment_run
+      - statistical_testing
+  - id: stage_4
+    name: CDC 短文草稿生成
+    executor: Agent
+    goal: 产出结构化短文初稿并绑定图表证据
+    required_capabilities:
+      - scientific_writing
+      - evidence_alignment
+  - id: stage_5
+    name: 人审收口与投稿包生成
+    executor: Human-Agent
+    goal: 完成主张边界确认、格式检查、最终稿收口
+    required_capabilities:
+      - compliance_check
+      - final_editing
+
+checkpoints:
+  - id: checkpoint_a
+    after_stage: stage_2
+    type: report-decision
+    required: true
+  - id: checkpoint_b
+    after_stage: stage_4
+    type: report-decision
+    required: true
+
+dependencies:
+  local_skills:
+    - code_claim_extractor
+    - experiment_rigor_runner
+    - cdc_short_paper_writer
+    - submission_compliance_checker
+  external_candidates:
+    - latex_template_adapter
+    - bib_quality_checker
+  unresolved: []
+
+entry_command: "/code_to_cdc_short_paper <code_path> --paper-type cdc_short"

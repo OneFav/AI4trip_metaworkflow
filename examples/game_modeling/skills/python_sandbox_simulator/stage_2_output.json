@@ -1,0 +1,14 @@
+{
+  "avg_payoffs": {
+    "P1": 2.25,
+    "P2": 2.25
+  },
+  "equilibrium_candidates": [
+    {
+      "P1": "A1",
+      "P2": "B1",
+      "prob": 0.8
+    }
+  ],
+  "convergence_info": "Stable within 50 rounds"
+}

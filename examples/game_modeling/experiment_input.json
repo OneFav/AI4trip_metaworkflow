@@ -1,0 +1,5 @@
+{
+  "game_name": "Prisoner's Dilemma",
+  "rule_text": "两个囚徒被隔离。如果都沉默，各判1年；如果一沉默一背叛，背叛者释放，沉默者判5年；如果都背叛，各判3年。",
+  "player_set": ["Prisoner_A", "Prisoner_B"]
+}

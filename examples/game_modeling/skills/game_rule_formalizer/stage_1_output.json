@@ -1,0 +1,67 @@
+{
+  "players": [
+    "Seer_Faction",
+    "Wolf_Faction"
+  ],
+  "action_space": {
+    "Seer_Faction": [
+      "TrueJump_Day1",
+      "Hide_LetVillagerFake",
+      "TrueJump_Day2"
+    ],
+    "Wolf_Faction": [
+      "BluffSeer_KillJumper",
+      "BluffSeer_KillSilent",
+      "LayLow_KillJumper"
+    ]
+  },
+  "payoff_matrix": [
+    [
+      [
+        -5,
+        5
+      ],
+      [
+        5,
+        -5
+      ],
+      [
+        8,
+        -8
+      ]
+    ],
+    [
+      [
+        10,
+        -10
+      ],
+      [
+        -8,
+        8
+      ],
+      [
+        6,
+        -6
+      ]
+    ],
+    [
+      [
+        0,
+        0
+      ],
+      [
+        -10,
+        10
+      ],
+      [
+        -2,
+        2
+      ]
+    ]
+  ],
+  "assumptions": [
+    "将信息不对称（狼人不知身份）纳入策略：狼人的刀法只能基于白天的起跳行为或盲刀",
+    "引入了平民诈跳挡刀策略以保护隐忍的预言家",
+    "矩阵为预言家阵营(包含挡刀平民)与狼人阵营的零和博弈"
+  ]
+}

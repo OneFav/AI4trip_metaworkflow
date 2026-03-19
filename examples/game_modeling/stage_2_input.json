@@ -1,0 +1,7 @@
+{
+  "formalized_model": {
+    "players": ["P1", "P2"],
+    "payoff_matrix": [[[3, 3], [0, 5]], [[5, 0], [1, 1]]]
+  },
+  "budget": 10
+}

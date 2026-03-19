@@ -1,0 +1,11 @@
+{
+  "model_name": "memory_attention_state_space_gated_rehearsal",
+  "observed_acc_column": "acc",
+  "observed_rt_column": "rt",
+  "interference_column": "I",
+  "demand_column": "D",
+  "rehearsal_column": "U",
+  "fatigue_column": "F",
+  "draws": 1000,
+  "tune": 1000
+}

@@ -1,0 +1,11 @@
+{
+    "formalized_model": {
+        "players": ["Seer_Faction", "Wolf_Faction"],
+        "payoff_matrix": [
+            [[-5, 5], [5, -5], [8, -8]], 
+            [[10, -10], [-8, 8], [6, -6]], 
+            [[0, 0], [-10, 10], [-2, 2]]      
+        ]
+    },
+    "budget": 500
+}

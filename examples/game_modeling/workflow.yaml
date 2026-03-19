@@ -1,0 +1,80 @@
+name: game_modeling
+version: v0.1
+goal: 从桌游/游戏规则构建博弈模型，完成 Python 沙盘演化与数学求解，并输出一致性分析结论
+scene: research_desk
+automation_mode: balanced
+
+stages:
+  - id: stage_1
+    name: 规则抽象与博弈形式化
+    executor: Human-Agent
+    goal: 将规则映射为可计算的玩家、策略、收益和约束定义
+    required_capabilities:
+      - rule_parsing
+      - game_formalization
+      - assumption_registry
+  - id: stage_2
+    name: Python沙盘构建与演化仿真
+    executor: Agent
+    goal: 实现仿真器并执行参数扫描和批量对局
+    required_capabilities:
+      - simulation_coding
+      - batch_experiment
+      - metrics_logging
+  - id: stage_3
+    name: 数学求解与均衡分析
+    executor: Agent
+    goal: 进行均衡求解并和仿真结果做一致性对照
+    required_capabilities:
+      - equilibrium_solver
+      - symbolic_or_numeric_analysis
+      - consistency_check
+  - id: stage_4
+    name: 结论收敛与模型修订决策
+    executor: Human-Agent
+    goal: 汇总证据并决定模型收敛或继续迭代
+    required_capabilities:
+      - report_generation
+      - discrepancy_diagnosis
+      - decision_support
+
+checkpoints:
+  - id: checkpoint_model_freeze
+    after_stage: stage_1
+    type: report-decision
+    required: true
+  - id: checkpoint_consistency_gate
+    after_stage: stage_3
+    type: report-decision
+    required: true
+
+dependencies:
+  local_skills:
+    - game_rule_formalizer
+    - python_sandbox_simulator
+    - equilibrium_solver_core
+    - consistency_checker
+    - sensitivity_reporter
+  external_candidates:
+    - name: open_spiel
+      source: https://github.com/google-deepmind/open_spiel
+      status: candidate_verified_not_installed
+    - name: gambit
+      source: https://github.com/gambitproject/gambit
+      status: candidate_verified_not_installed
+    - name: nashpy
+      source: https://github.com/drvinceknight/Nashpy
+      status: candidate_verified_not_installed
+    - name: mesa
+      source: https://github.com/mesa/mesa
+      status: candidate_verified_not_installed
+    - name: pettingzoo
+      source: https://github.com/Farama-Foundation/PettingZoo
+      status: candidate_verified_not_installed
+    - name: axelrod
+      source: https://github.com/Axelrod-Python/Axelrod
+      status: candidate_verified_not_installed
+  unresolved:
+    - general_n_player_orchestration_layer
+
+entry_command: "/game_modeling game_rules.md --mode balanced"

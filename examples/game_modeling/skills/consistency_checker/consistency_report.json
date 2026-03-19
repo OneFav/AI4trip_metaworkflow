@@ -1,0 +1,12 @@
+{
+  "is_consistent": false,
+  "discrepancies": [
+    {
+      "field": "P1_strategy",
+      "sim": 0.8,
+      "solver": 0.38095238095238093,
+      "reason": "Simulation not yet converged or local optima"
+    }
+  ],
+  "confidence_level": "Medium"
+}
