@@ -1,0 +1,8 @@
+{
+  "response_matrices": [
+    {
+      "id": "grn_krumsiek11_like",
+      "matrix_ref": "outputs/response/grn_krumsiek11_like_matrix.npy"
+    }
+  ]
+}

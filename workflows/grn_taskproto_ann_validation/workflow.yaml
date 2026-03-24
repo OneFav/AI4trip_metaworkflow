@@ -1,0 +1,119 @@
+name: grn_taskproto_ann_validation
+version: v0.1
+goal: "将 GRN 与 ANN 统一为 PIRG 表征，完成任务原型匹配、ANN 距离排序与外部验证"
+scene: "GRN→任务原型→ANN 验证闭环"
+automation_mode: balanced
+
+stages:
+  - id: stage_a
+    name: "任务原型库构建"
+    executor: Agent
+    goal: "构建固定任务原型库与 prototype PIRG"
+    required_capabilities:
+      - task_prototype_library_builder
+      - probe_compiler
+      - pirg_builder
+
+  - id: stage_b
+    name: "GRN 侧自动测量"
+    executor: Agent
+    goal: "GRN 预处理、条件映射、响应采集与 GRN-PIRG 构造"
+    required_capabilities:
+      - grn_intake
+      - probe_compiler
+      - grn_observer
+      - scanpy_preprocessor_adapter
+      - pyscenic_adapter
+      - pirg_builder
+
+  - id: stage_c
+    name: "GRN→任务原型匹配"
+    executor: Agent
+    goal: "计算 GRN-PIRG 与 prototype PIRG 的距离并输出 Top-K"
+    required_capabilities:
+      - distance_engine
+      - pot_gw_adapter
+      - ott_jax_gw_adapter
+      - result_reporter
+
+  - id: stage_d
+    name: "ANN 候选集统一测试"
+    executor: Agent
+    goal: "候选 ANN 统一测量并构造 ANN-PIRG，完成距离排序"
+    required_capabilities:
+      - ann_runner
+      - ann_observer
+      - mamba_ssm_adapter
+      - pirg_builder
+      - distance_engine
+
+  - id: stage_e
+    name: "外部验证与报告"
+    executor: Human-Agent
+    goal: "验证距离排序与任务适配性的关联并形成报告"
+    required_capabilities:
+      - validator
+      - result_reporter
+
+checkpoints:
+  - id: checkpoint_c1
+    after_stage: stage_c
+    type: report-decision
+    required: true
+
+dependencies:
+  local_skills:
+    - grn_intake
+    - task_prototype_library_builder
+    - probe_compiler
+    - grn_observer
+    - ann_observer
+    - ann_runner
+    - pirg_builder
+    - distance_engine
+    - validator
+    - result_reporter
+    - scanpy_preprocessor_adapter
+    - pyscenic_adapter
+    - pot_gw_adapter
+    - ott_jax_gw_adapter
+    - mamba_ssm_adapter
+  external_candidates:
+    - name: python_optimal_transport_pot
+      source: https://github.com/PythonOT/POT
+      status: downloaded_local_snapshot
+      local_path: workflows/grn_taskproto_ann_validation/external_candidates/POT
+      version_or_commit: 41a4d57
+    - name: ott_jax
+      source: https://github.com/ott-jax/ott
+      status: downloaded_local_snapshot
+      local_path: workflows/grn_taskproto_ann_validation/external_candidates/ott-jax
+      version_or_commit: e7d02d0
+    - name: pySCENIC
+      source: https://github.com/aertslab/pySCENIC
+      status: downloaded_local_snapshot
+      local_path: workflows/grn_taskproto_ann_validation/external_candidates/pySCENIC
+      version_or_commit: 06bafba
+    - name: scanpy
+      source: https://github.com/scverse/scanpy
+      status: downloaded_partial_windows_path_limit
+      local_path: workflows/grn_taskproto_ann_validation/external_candidates/scanpy
+      version_or_commit: 9de11b1
+    - name: mamba_ssm
+      source: https://github.com/state-spaces/mamba
+      status: downloaded_local_snapshot
+      local_path: workflows/grn_taskproto_ann_validation/external_candidates/mamba
+      version_or_commit: ee2a86a
+    - name: gene2ai-openclaw-skill
+      source: clawhub:gene2ai-openclaw-skill
+      status: downloaded_clawhub_skill
+      local_path: workflows/grn_taskproto_ann_validation/skills/gene2ai-openclaw-skill
+      version_or_commit: 0.1.5
+    - name: flow-cytometry-gating-strategist
+      source: clawhub:flow-cytometry-gating-strategist
+      status: downloaded_clawhub_skill_with_risk_warning
+      local_path: workflows/grn_taskproto_ann_validation/skills/flow-cytometry-gating-strategist
+      version_or_commit: 0.1.0
+  unresolved: []
+
+entry_command: "/grn_taskproto_ann_validation <input_file>"

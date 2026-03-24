@@ -1,0 +1,21 @@
+{
+  "grn_krumsiek11_like": [
+    {
+      "prototype": "Proto-Memory",
+      "score": 0.42
+    },
+    {
+      "prototype": "Proto-Switch",
+      "score": 0.31
+    },
+    {
+      "prototype": "Proto-Local",
+      "score": 0.44
+    }
+  ],
+  "distance_summary": {
+    "metric": "GW",
+    "grn_count": 1,
+    "prototype_count": 3
+  }
+}

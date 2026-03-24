@@ -1,0 +1,10 @@
+{
+  "skill": "task_prototype_library_builder",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "prototype_library_ref": "data/prototypes/v1",
+  "prototype_pirg_refs": {
+    "Proto-Memory": "data/prototypes/v1/pirg/proto_memory.pirg",
+    "Proto-Switch": "data/prototypes/v1/pirg/proto_switch.pirg",
+    "Proto-Local": "data/prototypes/v1/pirg/proto_local.pirg"
+  }
+}

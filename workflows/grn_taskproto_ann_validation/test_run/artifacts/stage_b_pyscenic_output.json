@@ -1,0 +1,9 @@
+{
+  "skill": "pyscenic_adapter",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "regulon_activity_ref": "outputs/grn/regulon_activity.stub.csv",
+  "grn_adjacency_ref": "outputs/grn/grn_adjacency.stub.tsv",
+  "dependency": {
+    "pyscenic_available": false
+  }
+}

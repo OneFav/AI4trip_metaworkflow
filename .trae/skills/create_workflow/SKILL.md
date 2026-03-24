@@ -32,9 +32,14 @@ description: "当出现以下任一情况时触发：
 - `workflows/<workflow_name>/activation_ready.md`
 - `workflows/<workflow_name>/workflow_plan.md`
 - `workflows/<workflow_name>/skill_io_templates.md`
-- `workflows/<workflow_name>/skills_manifest.md`
-- `workflows/<workflow_name>/tuning_report.md`
-- `workflows/<workflow_name>/run_experiment.md`
+- `workflows/<workflow_name>/task_intent.md`
+- `workflows/<workflow_name>/evaluation_criteria.md`
+- `workflows/<workflow_name>/generated/skills_manifest.md`
+- `workflows/<workflow_name>/generated/tuning_report.md`
+- `workflows/<workflow_name>/generated/run_experiment.md`
+- `workflows/<workflow_name>/generated/evaluation_log.md`
+
+> **注意**：所有生成物（skills_manifest、tuning_report、run_experiment）统一放入 `generated/` 子目录，以保持工作流根目录整洁。
 
 ---
 
@@ -56,6 +61,11 @@ description: "当出现以下任一情况时触发：
 ```text
 workflows/<workflow_name>/
 workflows/<workflow_name>/activation_ready.md
+workflows/<workflow_name>/generated/
+workflows/<workflow_name>/generated/skills_manifest.md
+workflows/<workflow_name>/generated/tuning_report.md
+workflows/<workflow_name>/generated/run_experiment.md
+workflows/<workflow_name>/generated/evaluation_log.md
 ````
 
 如果 workflow 构建失败，也必须生成：
@@ -79,20 +89,21 @@ workflows/_draft/generation_failure.md
 与用户交互，确认其需求，生成：
 
 ```text
-workflows/<workflow_name>/intent.md
+workflows/<workflow_name>/task_intent.md
+workflows/<workflow_name>/evaluation_criteria.md
 ```
-*交互节点：汇报 intent 内容，询问用户：“目标是否准确？是否需要补充？” 等待用户回复。*
+*交互节点：汇报任务意图与评估准则，询问用户：“目标与评估口径是否准确？是否需要补充？” 等待用户回复。*
 
 ### Phase 2: Solve
 
 **必须**读取并执行 `meta_skills/01_workflow_solver.md`。
-根据确认的 intent，生成：
+根据确认的任务意图与评估准则，生成：
 
 ```text
 workflows/<workflow_name>/workflow_plan.md
 workflows/<workflow_name>/skill_io_templates.md
 ```
-*交互节点：汇报 plan 和 I/O 模板，询问用户：“工作流步骤和接口设计是否合理？是否有缺失？” 等待用户回复。*
+*交互节点：汇报 plan 和 I/O 模板，询问用户：“是否已按 checkpoint 划分 skills、且 checkpoint 命名是否可读？” 等待用户回复。*
 
 ### Phase 3: Build
 
@@ -169,15 +180,19 @@ next_step:
 5. 存在 `output_spec.md`
 6. 存在 `command.md`
 7. 存在 `skill_io_templates.md`
-8. 存在 `skills_manifest.md`
-9. 存在 `tuning_report.md`
-10. 存在 `run_experiment.md`
-11. 至少包含一个“汇报-决策”节点
-12. Human / Agent / Human-Agent 分工清楚
-13. 命令入口存在且格式明确
-14. 若依赖外部技能，已明确标注“本地未安装/未导入”
-15. 对缺失关键技能已标注 `created_local_stub` 或 `unresolved`
-16. 已记录至少一次实验运行结论
+8. 存在 `generated/skills_manifest.md`
+9. 存在 `generated/tuning_report.md`
+10. 存在 `generated/run_experiment.md`
+11. 存在 `task_intent.md`
+12. 存在 `evaluation_criteria.md`
+13. 存在 `generated/evaluation_log.md`
+14. 至少包含一个"汇报-决策"节点
+15. Human / Agent / Human-Agent 分工清楚
+16. 命令入口存在且格式明确
+17. 若依赖外部技能，已明确标注"本地未安装/未导入"
+18. 对缺失关键技能已标注 `created_local_stub` 或 `unresolved`
+19. 已记录至少一次实验运行结论
+20. skills 划分严格映射 checkpoint，且 checkpoint 人类可读
 
 ---
 
@@ -266,9 +281,9 @@ workflows/<workflow_name>/activation_ready.md
 * output_spec.md: pass / fail
 * command.md: pass / fail
 * skill_io_templates.md: pass / fail
-* skills_manifest.md: pass / fail
-* tuning_report.md: pass / fail
-* run_experiment.md: pass / fail
+* generated/skills_manifest.md: pass / fail
+* generated/tuning_report.md: pass / fail
+* generated/run_experiment.md: pass / fail
 
 ## Human-Agent Boundary Check
 

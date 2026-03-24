@@ -1,0 +1,10 @@
+{
+  "skill": "pirg_builder",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "pirg_refs": [
+    {
+      "id": "grn_krumsiek11_like",
+      "pirg_ref": "outputs/pirg/grn_krumsiek11_like.pirg"
+    }
+  ]
+}

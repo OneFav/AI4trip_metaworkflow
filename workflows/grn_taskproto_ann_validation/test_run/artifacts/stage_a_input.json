@@ -1,0 +1,32 @@
+{
+  "prototype_definitions": [
+    "Proto-Memory",
+    "Proto-Switch",
+    "Proto-Local"
+  ],
+  "probe_family_definitions": {
+    "Proto-Memory": {
+      "delay_range": [
+        1,
+        4
+      ]
+    },
+    "Proto-Switch": {
+      "switch_rate_range": [
+        0.1,
+        0.6
+      ]
+    },
+    "Proto-Local": {
+      "radius_range": [
+        1,
+        3
+      ]
+    }
+  },
+  "ann_prototype_group_refs": {
+    "Proto-Memory": "data/prototypes/v1/memory",
+    "Proto-Switch": "data/prototypes/v1/switch",
+    "Proto-Local": "data/prototypes/v1/local"
+  }
+}

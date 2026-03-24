@@ -1,0 +1,61 @@
+{
+  "grn_id": "grn_krumsiek11_like",
+  "description": "Myeloid progenitor-like regulatory network for workflow smoke run",
+  "nodes": [
+    "GATA1",
+    "GATA2",
+    "SPI1",
+    "CEBPA",
+    "FOG1",
+    "KLF1"
+  ],
+  "edges": [
+    {
+      "source": "GATA1",
+      "target": "FOG1",
+      "weight": 0.82,
+      "type": "activation"
+    },
+    {
+      "source": "GATA1",
+      "target": "SPI1",
+      "weight": -0.73,
+      "type": "inhibition"
+    },
+    {
+      "source": "SPI1",
+      "target": "GATA1",
+      "weight": -0.69,
+      "type": "inhibition"
+    },
+    {
+      "source": "SPI1",
+      "target": "CEBPA",
+      "weight": 0.76,
+      "type": "activation"
+    },
+    {
+      "source": "CEBPA",
+      "target": "SPI1",
+      "weight": 0.64,
+      "type": "activation"
+    },
+    {
+      "source": "GATA2",
+      "target": "GATA1",
+      "weight": 0.58,
+      "type": "activation"
+    },
+    {
+      "source": "KLF1",
+      "target": "GATA1",
+      "weight": 0.66,
+      "type": "activation"
+    }
+  ],
+  "observation_level": "module",
+  "metadata": {
+    "organism": "human",
+    "context": "hematopoietic_differentiation"
+  }
+}

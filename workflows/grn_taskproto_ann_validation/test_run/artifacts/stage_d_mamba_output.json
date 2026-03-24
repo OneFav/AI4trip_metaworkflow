@@ -1,0 +1,10 @@
+{
+  "skill": "mamba_ssm_adapter",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "mamba_checkpoint_ref": null,
+  "ann_pirg_ref": null,
+  "training_metrics_ref": null,
+  "dependency": {
+    "mamba_ssm_available": false
+  }
+}

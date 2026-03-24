@@ -1,0 +1,42 @@
+{
+  "input_grn": "grn_krumsiek11_like",
+  "stage_outputs": {
+    "stage_a": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\stage_a_output.json",
+    "stage_b_pirg": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\stage_b_pirg_output.json",
+    "stage_c_distance": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\stage_c_distance_output.json",
+    "stage_d_ann_runner": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\stage_d_ann_runner_output.json",
+    "stage_e_validator": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\stage_e_validator_output.json",
+    "stage_e_reporter": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\stage_e_reporter_output.json"
+  },
+  "artifacts": {
+    "topk": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\topk_task_prototypes.json",
+    "ranked_ann": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\ranked_ann_results.json",
+    "validation_report": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\validation_report.md"
+  },
+  "dependencies": {
+    "scanpy_adapter": {},
+    "pyscenic_adapter": {
+      "pyscenic_available": false
+    },
+    "pot_adapter": {
+      "pot_available": false,
+      "fallback_metric": "Frobenius"
+    },
+    "ott_adapter": {
+      "ott_available": false,
+      "fallback": "pot_gw_adapter"
+    },
+    "mamba_adapter": {
+      "mamba_ssm_available": false
+    },
+    "flow_cytometry_skill": {
+      "status": "ok",
+      "output": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\flow_cytometry_recommendation.json"
+    },
+    "gene2ai_skill": {
+      "api_key_present": false,
+      "status": "skipped_without_key"
+    }
+  },
+  "status": "completed"
+}

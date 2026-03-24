@@ -1,0 +1,9 @@
+{
+  "skill": "scanpy_preprocessor_adapter",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "normalized_expression_ref": "workflows/grn_taskproto_ann_validation/data/grn/krumsiek11_like_grn.json",
+  "qc_summary": {
+    "scanpy_available": false,
+    "mode": "surrogate"
+  }
+}

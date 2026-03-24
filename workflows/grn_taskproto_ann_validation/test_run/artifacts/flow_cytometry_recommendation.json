@@ -1,0 +1,93 @@
+{
+  "recommended_strategy": {
+    "name": "Myeloid-Optimized Sequential Gating",
+    "description": "针对髓系细胞的圈门策略，注意单核细胞和中性粒细胞的FSC/SSC差异",
+    "steps": [
+      {
+        "step": 1,
+        "gate": "FSC-A vs SSC-A",
+        "purpose": "区分不同细胞群（髓系细胞形态差异大）",
+        "recommendation": "根据细胞类型在相应区域设置门"
+      },
+      {
+        "step": 2,
+        "gate": "Live/Dead Dye",
+        "purpose": "排除死细胞",
+        "recommendation": "强烈推荐使用死活染料（如Zombie NIR、DAPI或7-AAD）"
+      },
+      {
+        "step": 3,
+        "gate": "FSC-H vs FSC-A",
+        "purpose": "排除粘连细胞，确保单细胞分析",
+        "recommendation": "在FSC-H vs FSC-A图上设置对角线门"
+      },
+      {
+        "step": 4,
+        "gate": "Neutrophils Identification",
+        "purpose": "识别Neutrophils",
+        "recommendation": "FSC/SSC明确区分"
+      }
+    ]
+  },
+  "fluorophore_recommendations": [
+    {
+      "fluorophore": "FITC",
+      "channel": "BL1",
+      "detector": "530/30",
+      "brightness": "high",
+      "considerations": [
+        "PE"
+      ],
+      "notes": "经典的绿色荧光染料，亮度高但易与PE串色"
+    },
+    {
+      "fluorophore": "PE",
+      "channel": "YL1",
+      "detector": "585/42",
+      "brightness": "very high",
+      "considerations": [
+        "FITC",
+        "PerCP",
+        "PE-Cy7"
+      ],
+      "notes": "最亮的染料之一，适合弱表达抗原"
+    },
+    {
+      "fluorophore": "APC",
+      "channel": "RL1",
+      "detector": "660/20",
+      "brightness": "very high",
+      "considerations": [
+        "APC-Cy7"
+      ],
+      "notes": "红色激光激发，亮度极高"
+    }
+  ],
+  "panel_optimization": {
+    "suggestions": [
+      "强荧光染料(FITC, PE, APC)适合搭配弱表达抗原"
+    ],
+    "avoid_combinations": []
+  },
+  "compensation_notes": [
+    "需要对FITC和PE进行补偿校正"
+  ],
+  "quality_control": [
+    "设置FMO（荧光减一对照）以确定阳性边界",
+    "使用同型对照排除非特异性结合",
+    "设置单染管用于补偿计算",
+    "每次实验前使用标准微球进行仪器质控"
+  ],
+  "input_summary": {
+    "cell_types": [
+      "Monocytes",
+      "Neutrophils"
+    ],
+    "fluorophores": [
+      "FITC",
+      "PE",
+      "APC"
+    ],
+    "purpose": "analysis"
+  }
+}

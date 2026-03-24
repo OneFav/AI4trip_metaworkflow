@@ -1,0 +1,13 @@
+{
+  "skill": "distance_engine",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "distance_matrices": {
+    "metric": "GW",
+    "grn_count": 1,
+    "prototype_count": 3
+  },
+  "ranking_summary": {
+    "status": "stub_completed",
+    "metric": "GW"
+  }
+}

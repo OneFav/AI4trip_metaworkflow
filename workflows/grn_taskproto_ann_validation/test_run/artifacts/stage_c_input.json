@@ -1,0 +1,11 @@
+{
+  "grn_pirg_refs": {
+    "grn_krumsiek11_like": "outputs/pirg/grn_krumsiek11_like.pirg"
+  },
+  "prototype_pirg_refs": {
+    "Proto-Memory": "data/prototypes/v1/pirg/proto_memory.pirg",
+    "Proto-Switch": "data/prototypes/v1/pirg/proto_switch.pirg",
+    "Proto-Local": "data/prototypes/v1/pirg/proto_local.pirg"
+  },
+  "distance_metric": "GW"
+}

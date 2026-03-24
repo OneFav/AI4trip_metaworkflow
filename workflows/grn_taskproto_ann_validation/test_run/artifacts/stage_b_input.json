@@ -1,0 +1,21 @@
+{
+  "grn_items": [
+    {
+      "id": "grn_krumsiek11_like",
+      "source": "workflows/grn_taskproto_ann_validation/data/grn/krumsiek11_like_grn.json"
+    }
+  ],
+  "grn_observation_level": "module",
+  "prototype_library_ref": "data/prototypes/v1",
+  "ann_candidates": [
+    "sparse_mlp",
+    "gru",
+    "ssm",
+    "moe"
+  ],
+  "validation_policy": {
+    "correlation": true,
+    "rank_consistency": true,
+    "ablation": true
+  }
+}

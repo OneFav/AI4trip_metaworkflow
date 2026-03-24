@@ -1,0 +1,32 @@
+{
+  "grn_chr21_real_expression": [
+    {
+      "prototype": "Proto-Switch",
+      "score": 0.6680390643336845
+    },
+    {
+      "prototype": "Proto-Local",
+      "score": 0.9424078222435421
+    },
+    {
+      "prototype": "Proto-Memory",
+      "score": 0.9588926359518479
+    }
+  ],
+  "distance_summary": {
+    "metric": "GW",
+    "cells": 12,
+    "genes_used": [
+      "RUNX1",
+      "ETS2",
+      "ERG",
+      "IFNAR1",
+      "IFNAR2",
+      "IL10RB",
+      "RCAN1",
+      "SOD1",
+      "CBS",
+      "BACH1"
+    ]
+  }
+}

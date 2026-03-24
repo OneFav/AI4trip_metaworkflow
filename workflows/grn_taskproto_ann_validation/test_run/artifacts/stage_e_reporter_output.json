@@ -1,0 +1,8 @@
+{
+  "skill": "result_reporter",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "validation_report_ref": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\artifacts\\validation_report.md",
+  "confidence_summary": {
+    "grn_krumsiek11_like": "moderate"
+  }
+}

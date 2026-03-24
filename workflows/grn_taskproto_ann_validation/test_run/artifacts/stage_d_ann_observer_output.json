@@ -1,0 +1,22 @@
+{
+  "skill": "ann_observer",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "ann_response_matrices": [
+    {
+      "ann": "sparse_mlp",
+      "matrix_ref": "outputs/response/ann_sparse_mlp_matrix.npy"
+    },
+    {
+      "ann": "gru",
+      "matrix_ref": "outputs/response/ann_gru_matrix.npy"
+    },
+    {
+      "ann": "ssm",
+      "matrix_ref": "outputs/response/ann_ssm_matrix.npy"
+    },
+    {
+      "ann": "moe",
+      "matrix_ref": "outputs/response/ann_moe_matrix.npy"
+    }
+  ]
+}

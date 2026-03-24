@@ -1,0 +1,10 @@
+{
+  "skill": "pot_gw_adapter",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "gw_distance": 0.45,
+  "transport_plan_ref": "outputs/distances/gw_transport_plan.npy",
+  "dependency": {
+    "pot_available": false,
+    "fallback_metric": "Frobenius"
+  }
+}

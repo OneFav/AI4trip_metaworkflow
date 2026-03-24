@@ -1,0 +1,15 @@
+{
+  "skill": "validator",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "validation_metrics": {
+    "policy": {
+      "correlation": true,
+      "rank_consistency": true,
+      "ablation": true
+    },
+    "status": "stub_completed"
+  },
+  "failure_cases": [
+    "shuffled_grn_control_failed"
+  ]
+}

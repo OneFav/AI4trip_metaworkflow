@@ -1,0 +1,14 @@
+{
+  "skill": "ann_runner",
+  "run_id": "smoke_grn_krumsiek11_like",
+  "trained_ann_refs": {
+    "sparse_mlp": "outputs/ann/sparse_mlp.pt",
+    "gru": "outputs/ann/gru.pt",
+    "ssm": "outputs/ann/ssm.pt",
+    "moe": "outputs/ann/moe.pt"
+  },
+  "training_summary": {
+    "candidate_count": 4,
+    "status": "stub_completed"
+  }
+}

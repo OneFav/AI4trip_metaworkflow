@@ -1,0 +1,10 @@
+{
+  "validation_policy": {
+    "correlation": true,
+    "rank_consistency": true,
+    "ablation": true
+  },
+  "failure_cases": [
+    "shuffled_grn_control_failed"
+  ]
+}

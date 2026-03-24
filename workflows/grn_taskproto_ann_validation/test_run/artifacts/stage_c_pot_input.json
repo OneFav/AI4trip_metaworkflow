@@ -1,0 +1,5 @@
+{
+  "source_pirg_ref": "outputs/pirg/grn_krumsiek11_like.pirg",
+  "target_pirg_ref": "data/prototypes/v1/pirg/proto_memory.pirg",
+  "gw_config": {}
+}

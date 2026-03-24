@@ -1,0 +1,22 @@
+{
+  "grn_krumsiek11_like": {
+    "Proto-Memory": [
+      {
+        "ann": "gru",
+        "score": 0.2
+      },
+      {
+        "ann": "ssm",
+        "score": 0.27
+      },
+      {
+        "ann": "moe",
+        "score": 0.36
+      },
+      {
+        "ann": "sparse_mlp",
+        "score": 0.48
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "ann_candidates": [
+    "sparse_mlp",
+    "gru",
+    "ssm",
+    "moe"
+  ]
+}

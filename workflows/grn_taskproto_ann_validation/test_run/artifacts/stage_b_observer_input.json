@@ -1,0 +1,8 @@
+{
+  "normalized_grn_refs": [
+    {
+      "id": "grn_krumsiek11_like",
+      "normalized_ref": "workflows/grn_taskproto_ann_validation/data/grn/krumsiek11_like_grn.json"
+    }
+  ]
+}

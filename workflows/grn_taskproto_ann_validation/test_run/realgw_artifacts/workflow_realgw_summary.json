@@ -1,0 +1,9 @@
+{
+  "status": "completed",
+  "input": "scanpy 10x hg19_chr21 matrix.mtx",
+  "topk_file": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\realgw_artifacts\\topk_task_prototypes_realgw.json",
+  "ranked_ann_file": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\realgw_artifacts\\ranked_ann_results_realgw.json",
+  "validation_report": "C:\\Users\\admin\\Desktop\\AI4Trip_metaworkflows\\workflows\\grn_taskproto_ann_validation\\test_run\\realgw_artifacts\\validation_report_realgw.md",
+  "top_prototype": "Proto-Switch",
+  "best_ann": "sparse_mlp"
+}
